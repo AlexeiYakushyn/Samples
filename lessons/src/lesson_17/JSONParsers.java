@@ -25,8 +25,5 @@ public class JSONParsers {
         } catch (ParseException e1) {
             e1.printStackTrace();
         }
-
-
     }
-
 }
