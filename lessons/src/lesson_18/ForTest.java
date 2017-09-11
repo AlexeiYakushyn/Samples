@@ -12,7 +12,7 @@ public class ForTest  {
 
         List<Integer> integers = new ArrayList<>();
 
-        if (list == null) integers.add(-1);
+        if (list == null) throw new IllegalArgumentException("must be not Null");
 
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) == null) {
