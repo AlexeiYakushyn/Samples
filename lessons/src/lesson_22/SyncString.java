@@ -32,7 +32,7 @@ public class SyncString {
 //        } finally {
 //            this.lock.unlock();
 //        }
-//        System.out.println(strings.size());
+       System.out.println(strings.size());
         Collections.synchronizedSet(strings);
         return strings;
     }
