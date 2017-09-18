@@ -3,6 +3,8 @@ package lesson_22;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by java2 on 14.09.17.
@@ -11,7 +13,7 @@ public class SyncString {
 
     private static Set<String> strings = new HashSet<>();
 
-//    private Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock();
 
     public Set<String> getStrings() {
         return strings;
@@ -35,8 +37,5 @@ public class SyncString {
         return strings;
     }
 
-//    public static Set<String> synchronizedSet(Set<String> s) {
-//        Collections.synchronizedSet(s);
-//        return s;
-//    }
+
 }
