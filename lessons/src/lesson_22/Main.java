@@ -6,8 +6,6 @@ package lesson_22;
 public class Main {
     public static void main(String[] args) {
         SyncString syncString = new SyncString();
-
-
         String s1 = "«Почему паттерны, мы же и без них отлично кодим?» — довольно частый вопрос людей, " +
                 "«программирующих» на любом из ООП языков. " +
                 "Хочу эту ситуацию несколько прояснить: современное программирование уже не ремесло, а скорее фабрика, и важен не только результат, " +
@@ -32,12 +30,12 @@ public class Main {
         new Thread(thread3, "Thread3").start();
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         System.out.println(syncString.getStrings().size());
-
+       // System.out.println(synchronizedSet(syncString.getStrings()).toString());
     }
 }
