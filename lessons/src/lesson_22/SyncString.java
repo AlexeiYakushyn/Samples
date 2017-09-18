@@ -9,9 +9,10 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Created by java2 on 14.09.17.
  */
+
 public class SyncString {
 
-    private static Set<String> strings = new HashSet<>();
+    private static Set<String> strings = Collections.synchronizedSet(new HashSet<>());
 
     private Lock lock = new ReentrantLock();
 
@@ -32,10 +33,8 @@ public class SyncString {
 //        } finally {
 //            this.lock.unlock();
 //        }
-       System.out.println(strings.size());
-        Collections.synchronizedSet(strings);
+//       System.out.println(strings.size());
+       // Collections.synchronizedSet(strings);
         return strings;
     }
-
-
 }
